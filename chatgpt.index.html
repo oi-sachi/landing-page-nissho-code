@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sachi | Portfolio</title>
+    <meta name="description" content="Sachiの自己紹介サイト。仕事・趣味・つながりのある国についてまとめています。" />
+    <style>
+        :root {
+            --bg: #0b0f17;
+            --card: #121a27;
+            --text: #e8eefc;
+            --muted: #a7b2cc;
+            --accent: #7aa7ff;
+            --border: rgba(255, 255, 255, .12);
+            --radius: 18px;
+            --max: 1000px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif;
+            color: var(--text);
+            background: radial-gradient(1200px 700px at 20% 0%, rgba(122, 167, 255, .20), transparent 55%),
+                radial-gradient(900px 600px at 90% 10%, rgba(122, 255, 210, .12), transparent 60%),
+                var(--bg);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        img {
+            max-width: 100%;
+            display: block
+        }
+
+        .container {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 28px 18px 80px
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(10px);
+            background: rgba(11, 15, 23, .55);
+            border-bottom: 1px solid var(--border);
+            z-index: 10;
+        }
+
+        .nav {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .brand {
+            font-weight: 700;
+            letter-spacing: .3px
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--muted)
+        }
+
+        .navlinks a:hover {
+            color: var(--text)
+        }
+
+        .hero {
+            padding: 44px 0 24px;
+            display: grid;
+            gap: 18px;
+        }
+
+        .badge {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        .badge span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: var(--accent)
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 38px;
+            line-height: 1.2
+        }
+
+        .lead {
+            margin: 0;
+            color: var(--muted);
+            max-width: 70ch
+        }
+
+        .cta {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 8px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 14px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, .06);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .btn.primary {
+            border-color: rgba(122, 167, 255, .55);
+            background: rgba(122, 167, 255, .16)
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        section {
+            margin-top: 26px
+        }
+
+        .card {
+            border: 1px solid var(--border);
+            background: rgba(18, 26, 39, .78);
+            border-radius: var(--radius);
+            padding: 18px;
+        }
+
+        .card h2 {
+            margin: 0 0 10px;
+            font-size: 18px
+        }
+
+        .muted {
+            color: var(--muted)
+        }
+
+        .col-6 {
+            grid-column: span 6
+        }
+
+        .col-12 {
+            grid-column: span 12
+        }
+
+        ul {
+            margin: 10px 0 0;
+            padding-left: 1.2em
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px
+        }
+
+        .chip {
+            font-size: 13px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            color: var(--muted)
+        }
+
+        footer {
+            margin-top: 38px;
+            color: var(--muted);
+            font-size: 13px;
+            text-align: center
+        }
+
+        @media (max-width:720px) {
+            h1 {
+                font-size: 30px
+            }
+
+            .col-6 {
+                grid-column: span 12
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <a class="brand" href="#top">Sachi</a>
+            <nav class="navlinks" aria-label="ページ内ナビゲーション">
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+                <a href="#hobby">Hobby</a>
+                <a href="#countries">Countries</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top" class="container">
+        <section class="hero">
+            <div class="badge"><span></span>
+                <p class="badge">編集・企画 / クリエイティブ</p>
+            </div>
+            <h1>こんにちは、Sachiです。</h1>
+            <p class="lead">
+                ここでは、私の仕事・趣味・つながりのある国（滞在経験）をまとめています。
+                気軽にのぞいていってください。
+            </p>
+            <div class="cta">
+                <a class="btn primary" href="#contact">つながる</a>
+                <a class="btn" href="#work">仕事を見る</a>
+            </div>
+        </section>
+
+        <div class="grid">
+            <section id="about" class="card col-12">
+                <h2>About</h2>
+                <p class="muted">
+                    （ここに自己紹介を2〜4行）例：書籍編集と企画を中心に、言葉と構成で「伝わる」をつくっています。
+                    好きなことは、現場の熱量を感じること。観戦も、仕事も、どっちも本気。
+                </p>
+                <div class="chips">
+                    <span class="chip">編集 / 企画</span>
+                    <span class="chip">文章設計</span>
+                    <span class="chip">海外経験あり</span>
+                    <span class="chip">サッカー観戦</span>
+                </div>
+            </section>
+
+            <section id="work" class="card col-6">
+                <h2>Work</h2>
+                <p class="muted">どんな仕事をしているかを、短く・具体的に。</p>
+                <ul>
+                    <li>書籍の編集・企画（テーマ設計、構成、原稿整理など）</li>
+                    <li>制作進行（デザイン/校正/入稿まわり）</li>
+                    <li>販促用コピー・紹介文作成</li>
+                </ul>
+            </section>
+
+            <section id="hobby" class="card col-6">
+                <h2>Hobby</h2>
+                <p class="muted">サッカー観戦について。好きな選手や印象的な試合など。</p>
+                <ul>
+                    <li>好き：イニエスタ（ほかも追記OK）</li>
+                    <li>現地観戦：引退試合や代表戦など</li>
+                    <li>好きなポイント：連携・視野・判断の美しさ</li>
+                </ul>
+            </section>
+
+            <section id="countries" class="card col-12">
+                <h2>Countries</h2>
+                <p class="muted">つながりのある国（住んだ/学んだ/働いた）をまとめるセクション。</p>
+                <div class="grid" style="margin-top:10px">
+                    <div class="card col-6">
+                        <h2 style="font-size:16px; margin:0 0 6px">United States</h2>
+                        <p class="muted" style="margin:0">滞在：3年（追記：都市や印象など）</p>
+                    </div>
+                    <div class="card col-6">
+                        <h2 style="font-size:16px; margin:0 0 6px">Australia</h2>
+                        <p class="muted" style="margin:0">滞在：2年弱（ワーホリ/学び など）</p>
+                    </div>
+                    <div class="card col-6">
+                        <h2 style="font-size:16px; margin:0 0 6px">Canada</h2>
+                        <p class="muted" style="margin:0">滞在：半年（追記OK）</p>
+                    </div>
+                    <div class="card col-6">
+                        <h2 style="font-size:16px; margin:0 0 6px">…</h2>
+                        <p class="muted" style="margin:0">追加したい国があれば増やせるよ</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="card col-12">
+                <h2>Contact</h2>
+                <p class="muted">連絡先（SNS / メール / フォーム）を入れる場所。</p>
+                <ul>
+                    <li><a href="#" aria-label="Xのリンク">X：@xxxx</a></li>
+                    <li><a href="#" aria-label="Instagramのリンク">Instagram：@xxxx</a></li>
+                    <li><a href="mailto:hello@example.com">Mail：hello@example.com</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <footer>
+            © <span id="y"></span> Sachi. All rights reserved.
+        </footer>
+
+        <script>
+            document.getElementById("y").textContent = new Date().getFullYear();
+        </script>
+    </main>
+</body>
+
+</html>
